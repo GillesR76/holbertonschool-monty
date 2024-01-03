@@ -14,6 +14,7 @@ void execute(char *opcode, stack_t **stack, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}};
 
 	for (i = 0; instructions[i].opcode; i++)
