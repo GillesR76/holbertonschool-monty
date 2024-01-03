@@ -40,5 +40,6 @@ void pall(stack_t **stack, unsigned int line_number);
 void execute(char *opcode, stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void free_node(stack_t **stack);
 
 #endif
