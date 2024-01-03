@@ -43,5 +43,6 @@ int main(int argc, char *argv[])
 
 	fclose(file);
 	free(line);
+	free_node(&stack);
 	return (EXIT_SUCCESS);
 }
