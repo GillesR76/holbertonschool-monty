@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	ssize_t read;
 	unsigned int line_number = 0;
+	char *opcode;
 
 	stack_t *stack = NULL;
 
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
 	while ((read = getline(&line, &len, file)) != -1)
 	{
 		line_number++;
-		char *opcode = strtok(line, " \n\t");
+		opcode = strtok(line, " \n\t");
 
 		if (opcode && opcode[0] != '#')
 		{
