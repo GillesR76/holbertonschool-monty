@@ -11,7 +11,11 @@ void free_node(stack_t **stack)
 	stack_t *new_node;
 
 	new_node = *stack;
-	if (new_node)
+
+	while (new_node)
+	{
 		*stack = new_node->next;
-	free(new_node);
+		free(new_node);
+		new_node = *stack;
+	}
 }
